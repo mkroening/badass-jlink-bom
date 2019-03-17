@@ -9,8 +9,12 @@ repositories {
 }
 
 dependencies {
-    implementation("com.google.code.gson:gson:2.8.5")
-    implementation("dom4j:dom4j:1.6.1")
+    // import a BOM
+    implementation(platform("org.springframework.boot:spring-boot-dependencies:2.1.3.RELEASE"))
+
+    // define dependencies without versions
+    implementation("com.google.code.gson:gson")
+    implementation("dom4j:dom4j")
 }
 
 application {
